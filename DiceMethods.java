@@ -32,22 +32,13 @@ public class DiceMethods
 		Scanner in = new Scanner(System.in);
 		
 		System.out.print("Pick a number from 2 to 12: ");
-		int target;
-		if (in.hasNextInt())
-		{
-			target = in.nextInt();
-		}
-		else
+		int target= in.nextInt();
+		while(target < 2 || target >12)
 		{
 			System.out.print("Sorry, thats not a number.\nPlease enter a number from 2 to 12: ");
+			target = in.nextInt();
+			in.nextLine();	
 		}
-		
-		if(target < 2 || target > 12) 
-		{
-			System.out.print("You need to enter a number between 2 and 12: ");
-		}
-		
-		target = in.nextInt();
 		
 		die1.reset();
 		die2.reset();
