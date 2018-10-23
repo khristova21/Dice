@@ -32,7 +32,11 @@ public class Craps
 		int roll2 = die2.roll();
 		int sum = roll1 + roll2;
 		
-		
+		//win on first roll
+		if (sum == 7 || sum == 11)
+		{
+			System.out.print("You win!");
+		}
 		
 	}
 }
